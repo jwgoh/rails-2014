@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
 # Use postgresql as the database for Active Record
@@ -30,13 +29,19 @@ gem 'rails_12factor', group: :production
 
 gem 'unicorn'
 
+
+group :development, :test do
+  gem 'minitest'
+  gem 'turn', '< 0.8.3'           #http://stackoverflow.com/questions/7779467/how-do-i-add-gem-minitest-to-my-test-helper
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'guard-rspec'
+end
+
 ruby "2.1.5"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
-# Use unicorn as the app server
-# gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
