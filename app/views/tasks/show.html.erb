@@ -1,0 +1,19 @@
+<% flash.each do |name, message| %>
+  <!-- <div id="flash_<%= name %>">
+    <%= message %>
+  </div> -->    <!-- Both forms are equivalent -->
+
+  <%= content_tag :div, message, :id => "flash_#{name}" %>
+
+<% end %>
+
+<p>
+  <strong>Task:</strong>
+  <%= @task.task %>
+</p>
+<p>
+  <strong>Due:</strong>
+  <%= @task.due %>
+</p>
+
+<%= link_to 'Back to Tasks', tasks_path %>

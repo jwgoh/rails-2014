@@ -1,10 +1,16 @@
 Rails.application.routes.draw do
 
+  root 'welcome#index'  #root :to => "Controller#action"
+
+  get 'tasks/index'
+
+  resources :tasks
+
   resources :articles do
     resources :comments
   end
 
-  root 'welcome#index'
+
 
 end
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,3 +1,19 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#links {
+  text-align: center;
+  margin: 30px;
+}
+
+p.welcome a:link, p.welcome a:visited, p.welcome a:hover, p.welcome a:active {
+  font-size: 20px;
+  text-decoration: none;
+  color: #3D1400;
+}
+
+.welcome {
+  margin: 30px;
+  font-size: 40px;
+}

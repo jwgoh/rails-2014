@@ -1,0 +1,32 @@
+<% flash.each do |name, message| %>
+
+  <%= content_tag :div, message, :id => "flash_#{name}" %>
+
+<% end %>
+
+<h1>Listing all Tasks</h1>
+
+<ul>
+  <% for task in @tasks %>
+<!--
+    <table>
+      <tr>
+        <td style="width:500px"><li id="task_<%= task.id %>"><%= task.task %></li></td>
+        <td style="width:150px"><strong>Due:</strong> <%= task.due %></td>
+        <td><%= link_to "Edit", edit_task_path(task) %></td>
+        <td><%= link_to "Delete", task, :method => "Delete" %></td>
+      </tr>
+    </table>
+-->
+    <li id="task_<%= task.id %>">
+      <%= task.task %>
+      | <%= task.due %>
+      | <%= link_to "Edit", edit_task_path(task) %>
+      | <%= link_to "Delete", task, :method => "Delete" %>
+    </li>    
+
+  <% end %>
+</ul>
+
+<p><%= link_to "Create New Task", new_task_path %></p>
+<p><%= link_to "Back to Home Page", root_path %></p>

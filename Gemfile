@@ -36,6 +36,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'guard-rspec'
+  gem 'launchy'
 end
 
 ruby "2.1.5"
